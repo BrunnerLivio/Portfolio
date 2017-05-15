@@ -38,17 +38,6 @@ header {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
-h1 {
-  font-family: $header_font;
-  font-size: 6em;
-  color: white;
-  font-weight: normal;
-  margin: 0;
-  @media #{$break-md} {
-    font-size: 4em;
-  }
-}
-
 .highlight {
   @include gradient-vertical($accent_light, $accent);
   color: $accent;
