@@ -32,10 +32,13 @@ header {
   background: $primary;
   @include gradient-radial($primary, $primary_dark);
   width: 100%;
-  height: 80vh;
   position: relative;
   padding: 0;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  height: 100vh;
+  @media #{$break-md} {
+    height: 80vh;
+  }
 }
 
 .highlight {
@@ -52,6 +55,7 @@ header {
   width: 100%;
   top: -50px;
   position: relative;
+  margin: 0;
 }
 
 .triangles {
@@ -60,19 +64,23 @@ header {
   left: 0;
   background: url(../assets/header_triangles.png);
   background-size: 100% 100%;
-  height: 200px;
   width: 100%;
+  height: 130px;
+  @media #{$break-md} {
+    height: 200px;
+  }
 }
 
 .logo {
   background: url(../assets/logo.png);
   background-size: 100% 100%;
   position: relative;
-  width: 150px;
-  height: 150px;
+  height: 75px;
+  width: 75px;
+  margin: 10px;
   @media #{$break-md} {
-    width: 100px;
     height: 100px;
+    width: 100px;
   }
 }
 </style>

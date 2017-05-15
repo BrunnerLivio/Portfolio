@@ -29,10 +29,10 @@ blockquote {
 
 h1 {
   font-family: $accent_font;
-  font-size: 6em;
   color: white;
   font-weight: normal;
   margin: 0;
+  font-size: 2.5em;
   @media #{$break-md} {
     font-size: 4em;
   }
@@ -41,8 +41,8 @@ h1 {
 
 h2 {
   font-weight: 400;
-  font-size: 2.5em;
   color: $text-color;
+  font-size: 1em;
   @media #{$break-md} {
     font-size: 1.8em;
   }
@@ -50,22 +50,22 @@ h2 {
 
 p {
   color: $text-color;
-  font-size: 1.8em;
-  line-height: 1.4em;
+  font-size: 0.8em;
   @media #{$break-md} {
     font-size: 1.25em;
   }
 }
 
 blockquote {
-  font-size: 2.2em;
   font-weight: lighter;
   font-style: italic;
   color: $quote-color;
   text-align: center;
-  margin: 80px;
+  margin: 10px;
+  font-size: 1em;
   @media #{$break-md} {
     font-size: 1.6em;
+    margin: 80px;
   }
 }
 </style>
