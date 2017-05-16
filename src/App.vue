@@ -48,6 +48,15 @@ h2 {
   }
 }
 
+h3 {
+  color: white;
+  font-size: 0.9em;
+  font-weight: lighter;
+  @media #{$break-md} {
+    font-size: 1.5em;
+  }
+}
+
 p {
   color: $text-color;
   font-size: 0.8em;

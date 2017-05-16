@@ -38,6 +38,8 @@ export default {
 .container {
   width: 100%;
   padding: 10px;
+  background-color: white;
+  margin: 0;
   @media #{$break-md} {
     padding: 20px;
   }
@@ -55,7 +57,7 @@ p {
   $portrait_width_md: 110px;
   width: $portrait_width_md;
   position: relative;
-  top:20px;
+  top: 20px;
   @media #{$break-md} {
     width: $portrait_width;
     top: 0;
