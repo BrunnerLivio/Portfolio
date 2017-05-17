@@ -19,12 +19,28 @@
             <img class="project-preview" src="https://raw.githubusercontent.com/BrunnerLivio/pokemongo-web-api/master/.github/version_0.1.1.png" alt="POGO API">
           </div>
           <p>
-            tsp-web is a visualization of the Debian program
-            <a href="http://vicerveza.homeunix.net/~viric/soft/ts/" target="_blank">task-spooler</a>. It runs on NodeJS. For the routing I used ExpressJS. Socket.IO is used for the websocket communication between server and client. One task to accomplish was, to parse the raw output from the tsp-command using regular expressions.
+            POGO API is a RESTful API for Pokemon GO. The whole application is written in
+            TypeScript. ExpressJS handles the routing of the application. Handlebars is used
+            for the static frontend generating. Bundled with Webpack.
+          </p>
+        </div>
+        <div class="col-md-8 project" id="mk-deps-project">
+          <h3>mk-deps</h3>
+          <div>
+            <img class="project-preview" src="../assets/mk-deps.gif" alt="mk-deps">
+          </div>
+          <p>
+            CLI tool which installs the runtime dependencies of debian packages,
+            without installing the package itself. This application is small, but
+            well-rounded with automatic unit tests, MAN-pages and autocompletion.
+            This program is written in Python. The program parses a "debian/control"" file
+            using regular expressions, in order to get its runtime dependencies.
           </p>
         </div>
       </div>
+      </div>
     </div>
+    <div id="mk-deps-background" class="project-background"></div>
     <div id="pogo-api-background" class="project-background"></div>
     <div id="tsp-web-background" class="project-background"></div>
     <div id="projects-background" class="project-background"></div>
@@ -42,25 +58,28 @@ export default {
       this.$tspWeb = this.$el.querySelector('#tsp-web-project');
       this.$tspWebBackground = this.$el.querySelector('#tsp-web-background');
       this.$pogoAPI = this.$el.querySelector('#pogo-api-project');
+      this.$pogoApiBackground = this.$el.querySelector('#pogo-api-background');
+      this.$mkDeps = this.$el.querySelector('#mk-deps-project');
       const scrollBottom = window.scrollY + (window.innerHeight / 2);
 
       const tspWebOffsetTop = offset(this.$tspWeb).top;
-      const tspWebOffsetCenter =
-        tspWebOffsetTop + (this.$tspWeb.clientHeight / 4);
-
       const pogoAPIOffsetTop = offset(this.$pogoAPI).top;
-      const pogoAPIOffsetCenter =
-        pogoAPIOffsetTop + (this.$pogoAPI.clientHeight / 4);
+      const mkDepsOffsetTop = offset(this.$mkDeps).top;
 
-      if (scrollBottom > tspWebOffsetCenter) {
+      if (scrollBottom > tspWebOffsetTop) {
         addClass(this.$projectsBackground, 'fade-out');
       } else {
         removeClass(this.$projectsBackground, 'fade-out');
       }
-      if (scrollBottom > pogoAPIOffsetCenter) {
+      if (scrollBottom > pogoAPIOffsetTop) {
         addClass(this.$tspWebBackground, 'fade-out');
       } else {
         removeClass(this.$tspWebBackground, 'fade-out');
+      }
+      if (scrollBottom > mkDepsOffsetTop) {
+        addClass(this.$pogoApiBackground, 'fade-out');
+      } else {
+        removeClass(this.$pogoApiBackground, 'fade-out');
       }
     },
   },
@@ -131,6 +150,10 @@ $triangle-height: 100px;
 
 #pogo-api-background {
   @include gradient-directional(#D17084, #985F8B);
+}
+
+#mk-deps-background {
+  @include gradient-directional(#300A24, #3465A4);
 }
 
 .project-background {
