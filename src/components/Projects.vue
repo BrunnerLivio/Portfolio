@@ -102,12 +102,24 @@ $triangle-height: 100px;
 }
 
 .project {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  padding: 20px;
+  min-height: 80vh;
+  @media #{$break-md} {
+    min-height: 90vh;
+  }
+  p {
+    width: 90%;
+    a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  }
   &-preview {
     width: 100%;
+    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12), 0 5px 5px -3px rgba(0, 0, 0, .2);
   }
 }
 
