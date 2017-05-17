@@ -86,11 +86,9 @@ $triangle-height: 100px;
   width: 100%;
   margin: 0;
   padding: 0;
-  position: relative;
-  top: $triangle-height;
+  overflow: hidden;
   &::before {
     position: relative;
-    top: -$triangle-height;
     content: '';
     display: block;
     width: 0;
