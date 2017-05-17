@@ -15,7 +15,9 @@ export function removeClass(el, className) {
 }
 
 export function offset(el) {
+  // Firefox workaround
+  const bodyScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
   return {
-    top: el.getBoundingClientRect().top + document.body.scrollTop,
+    top: el.getBoundingClientRect().top + bodyScrollTop,
   };
 }
