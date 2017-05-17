@@ -36,33 +36,25 @@ h1 {
   @media #{$break-md} {
     font-size: 4em;
   }
+  @include poly-fluid-sizing('font-size', (576px: 45px, 320px: 30px, 992px: 60px));
 }
 
 
 h2 {
   font-weight: 400;
   color: $text-color;
-  font-size: 1em;
-  @media #{$break-md} {
-    font-size: 1.8em;
-  }
+  @include poly-fluid-sizing('font-size', (576px: 22px, 320px: 18px, 992px: 30px));
 }
 
 h3 {
   color: white;
-  font-size: 0.9em;
   font-weight: lighter;
-  @media #{$break-md} {
-    font-size: 1.5em;
-  }
+  @include poly-fluid-sizing('font-size', (576px: 22px, 320px: 18px, 992px: 30px));
 }
 
 p {
   color: $text-color;
-  font-size: 0.8em;
-  @media #{$break-md} {
-    font-size: 1.25em;
-  }
+  @include poly-fluid-sizing('font-size', (576px: 16px, 320px: 12px, 992px: 18px));
 }
 
 blockquote {
@@ -71,10 +63,7 @@ blockquote {
   color: $quote-color;
   text-align: center;
   margin: 10px;
-  font-size: 1em;
-  @media #{$break-md} {
-    font-size: 1.6em;
-    margin: 80px;
-  }
+
+  @include poly-fluid-sizing('font-size', (576px: 20px, 320px: 18px, 992px: 24px));
 }
 </style>
