@@ -19,9 +19,7 @@
             <img class="project-preview" src="https://raw.githubusercontent.com/BrunnerLivio/pokemongo-web-api/master/.github/version_0.1.1.png" alt="POGO API">
           </div>
           <p>
-            POGO API is a RESTful API for Pokemon GO. The whole application is written in
-            TypeScript. ExpressJS handles the routing of the application. Handlebars is used
-            for the static frontend generating. Bundled with Webpack.
+            POGO API is a RESTful API for Pokemon GO. The whole application is written in TypeScript. ExpressJS handles the routing of the application. Handlebars is used for the static frontend generating. Bundled with Webpack.
           </p>
         </div>
         <div class="col-md-8 project" id="mk-deps-project">
@@ -30,16 +28,22 @@
             <img class="project-preview" src="../assets/mk-deps.gif" alt="mk-deps">
           </div>
           <p>
-            CLI tool which installs the runtime dependencies of debian packages,
-            without installing the package itself. This application is small, but
-            well-rounded with automatic unit tests, MAN-pages and autocompletion.
-            This program is written in Python. The program parses a "debian/control"" file
-            using regular expressions, in order to get its runtime dependencies.
+            CLI tool which installs the runtime dependencies of debian packages, without installing the package itself. This application is small, but well-rounded with automatic unit tests, MAN-pages and autocompletion. This program is written in Python. The program parses a "debian/control"" file using regular expressions, in order to get its runtime dependencies.
+          </p>
+        </div>
+        <div class="col-md-8 project" id="molior-project">
+          <h3>molior</h3>
+          <div>
+            <img class="project-preview" src="../assets/molior.png" alt="Molior">
+          </div>
+          <p>
+            molior is an automagic debian builder, which pulls git repos if there's a new release (git tag like v0.0.2), builds them and publishes/serves the built debian packages through aptly. My terroritory was mostly in the frontend and backend API. The difficult parts to accomplish in this project were to create an appealing web interface which broke down complex tasks.
           </p>
         </div>
       </div>
-      </div>
     </div>
+    </div>
+    <div id="molior-background" class="project-background"></div>
     <div id="mk-deps-background" class="project-background"></div>
     <div id="pogo-api-background" class="project-background"></div>
     <div id="tsp-web-background" class="project-background"></div>
@@ -60,11 +64,14 @@ export default {
       this.$pogoAPI = this.$el.querySelector('#pogo-api-project');
       this.$pogoApiBackground = this.$el.querySelector('#pogo-api-background');
       this.$mkDeps = this.$el.querySelector('#mk-deps-project');
+      this.$mkDepsBackground = this.$el.querySelector('#mk-deps-background');
+      this.$molior = this.$el.querySelector('#molior-project');
       const scrollBottom = window.scrollY + (window.innerHeight / 2);
 
       const tspWebOffsetTop = offset(this.$tspWeb).top;
       const pogoAPIOffsetTop = offset(this.$pogoAPI).top;
       const mkDepsOffsetTop = offset(this.$mkDeps).top;
+      const moliorOffsetTop = offset(this.$molior).top;
 
       if (scrollBottom > tspWebOffsetTop) {
         addClass(this.$projectsBackground, 'fade-out');
@@ -80,6 +87,11 @@ export default {
         addClass(this.$pogoApiBackground, 'fade-out');
       } else {
         removeClass(this.$pogoApiBackground, 'fade-out');
+      }
+      if (scrollBottom > moliorOffsetTop) {
+        addClass(this.$mkDepsBackground, 'fade-out');
+      } else {
+        removeClass(this.$mkDepsBackground, 'fade-out');
       }
     },
   },
@@ -155,6 +167,11 @@ $triangle-height: 100px;
 #mk-deps-background {
   @include gradient-directional(#300A24, #3465A4);
 }
+
+#molior-background {
+  @include gradient-directional(#008CBA, #FFD740);
+}
+
 
 .project-background {
   width: 100vw;
