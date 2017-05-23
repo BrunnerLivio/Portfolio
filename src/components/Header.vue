@@ -23,6 +23,19 @@
 <script>
 export default {
   name: 'header',
+  methods: {
+    update(e) {
+      const x = e.pageX - this.$el.offsetLeft;
+      this.$el.querySelector('#bubbles4').style.left = `-${x * 0.01}px`;
+      this.$el.querySelector('#bubbles3').style.left = `-${x * 0.008}px`;
+      this.$el.querySelector('#bubbles2').style.left = `-${x * 0.005}px`;
+      this.$el.querySelector('#bubbles1').style.left = `-${x * 0.001}px`;
+    },
+  },
+  mounted() {
+    this.$el.addEventListener('mousemove', (e) => { this.update(e); });
+    this.$el.addEventListener('touchmove', (e) => { this.update(e); });
+  },
 };
 
 </script>
@@ -67,6 +80,7 @@ header {
 .bubbles {
   animation: animStar linear infinite;
   border-radius: 200px;
+  position: relative;
   &#bubbles1 {
     box-shadow: $bubble-shadow-1;
     width: 4px;
