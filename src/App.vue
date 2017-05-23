@@ -41,8 +41,8 @@ h1 {
 
 
 h2 {
-  font-weight: 400;
-  color: $text-color;
+  font-weight: 300;
+  color: $header-text-color;
   @include poly-fluid-sizing('font-size', (576px: 22px, 320px: 18px, 992px: 30px));
 }
 
@@ -53,8 +53,9 @@ h3 {
 }
 
 p {
-  color: $text-color;
-  @include poly-fluid-sizing('font-size', (576px: 16px, 320px: 12px, 992px: 18px));
+  color: $body-text-color;
+  line-height: 1.6;
+  @include poly-fluid-sizing('font-size', (576px: 18px, 320px: 14px, 992px: 20px));
 }
 
 blockquote {
@@ -63,7 +64,6 @@ blockquote {
   color: $quote-color;
   text-align: center;
   margin: 10px;
-
-  @include poly-fluid-sizing('font-size', (576px: 20px, 320px: 18px, 992px: 24px));
+  @include poly-fluid-sizing('font-size', (576px: 24px, 320px: 20px, 992px: 26px));
 }
 </style>

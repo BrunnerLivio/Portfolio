@@ -129,16 +129,6 @@ $triangle-height: 100px;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  &::before {
-    position: relative;
-    content: '';
-    display: block;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 0 $triangle-height 100vw;
-    border-color: white white transparent white;
-  }
 }
 
 .project {

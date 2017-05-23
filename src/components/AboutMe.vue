@@ -21,7 +21,6 @@
           </div>
         </div>
       </div>
-
     </div>
   </section>
 </template>
@@ -37,11 +36,11 @@ export default {
 
 .container {
   width: 100%;
-  padding: 10px;
-  background-color: white;
+  padding: 35px;
+  background-color: $light_background;
   margin: 0;
   @media #{$break-md} {
-    padding: 20px;
+    padding: 50px;
   }
 }
 
@@ -74,7 +73,7 @@ p {
       border-style: solid;
     }
     &:before {
-      border-color: #ffffff transparent transparent transparent;
+      border-color: $light_background transparent transparent transparent;
       border-width: 30px $portrait_width_md * 0.75 0 0;
       @media #{$break-md} {
         border-width: 40px $portrait_width * 0.75 0 0;
@@ -82,7 +81,7 @@ p {
     }
     &:after {
       bottom: 0;
-      border-color: transparent transparent #ffffff transparent;
+      border-color: transparent transparent $light_background transparent;
       border-width: 0 0 30px $portrait_width_md * 0.75;
       left: $portrait_width_md * 0.25;
       @media #{$break-md} {
