@@ -13,6 +13,9 @@ export default {
 <style lang="scss">
 @import 'styles/main';
 
+body {
+  background: $primary;
+}
 
 h2,
 h3,
@@ -65,5 +68,15 @@ blockquote {
   text-align: center;
   margin: 10px;
   @include poly-fluid-sizing('font-size', (576px: 24px, 320px: 20px, 992px: 26px));
+}
+
+::selection {
+  background-color: $primary;
+  color: white;
+}
+
+::-moz-selection {
+  background-color: $primary;
+  color: white;
 }
 </style>
