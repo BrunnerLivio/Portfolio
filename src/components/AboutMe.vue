@@ -7,7 +7,7 @@
       <div class="row">
         <div class="col-xs-8">
           <p>
-            I'm called Livio. I love creating wesbites. Ever since I got a Computer, I was really interested how software works, why the work and why some are appealing to use. Since then I try to make my life and others easier by writing applications.
+            I'm called Livio. I love creating wesbites. Ever since I got a Computer, I was really interested how software works, why they work and why some are appealing to use. Since then I try to make my life and others easier by writing applications.
           </p>
           <blockquote>
             My goal is to enhance peoples lives
@@ -36,9 +36,10 @@ export default {
 
 .container {
   width: 100%;
-  padding: 35px;
   background-color: $light_background;
   margin: 0;
+  padding-top: 20px;
+  padding-bottom: 30px;
   @media #{$break-md} {
     padding: 50px;
   }

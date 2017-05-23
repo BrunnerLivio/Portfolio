@@ -154,12 +154,19 @@ $triangle-height: 100px;
   flex-direction: column;
   padding: 20px;
   min-height: 80vh;
-  transition: opacity 1s ease-in-out, top 1s ease-in-out;
+  transition: opacity 1s ease-in-out,
+  top 1s ease-in-out;
   opacity: 0;
   position: relative;
   top: 30px;
   @media #{$break-md} {
     min-height: 90vh;
+  }
+  &:first-child {
+    padding-top: 0;
+    h3 {
+      margin-top: 0;
+    }
   }
   &.active {
     opacity: 1;
