@@ -7,7 +7,13 @@
           <h3>tsp-web</h3>
           <div class="row">
             <div class="col-md-6 col-xs-12">
-              <img class="project-preview" src="https://camo.githubusercontent.com/4137446c6f6aca325dd7ed1fbb946dae73087376/687474703a2f2f692e696d6775722e636f6d2f35544c374f65502e6a7067" alt="tsp-web">
+              <picture class="project-preview">
+                <source media="(min-width: 1300px)" srcset="/static/projects/tsp-web/tsp-web_1500x.jpg">
+                <source media="(min-width: 1000px)" srcset="/static/projects/tsp-web/tsp-web_1200x.jpg">
+                <source media="(min-width: 570px)" srcset="/static/projects/tsp-web/tsp-web_770x.jpg">
+                <source media="(min-width: 200px)" srcset="/static/projects/tsp-web/tsp-web_400x.jpg">
+                <img src="/static/projects/tsp-web/tsp-web_original.jpg" alt="tsp-web">
+              </picture>
             </div>
             <div class="col-md-6 col-xs-12">
               <p>
@@ -33,11 +39,11 @@
             </div>
             <div class="col-md-6 col-xs-12">
               <picture class="project-preview">
-                <source media="(min-width: 1300px)" srcset="/static/projects/pogoapi1500x812.jpg">
-                <source media="(min-width: 900px)" srcset="/static/projects/pogoapi1200x650.jpg">
-                <source media="(min-width: 500px)" srcset="/static/projects/pogoapi770x480.jpg">
-                <source media="(min-width: 0px)" srcset="/static/projects/pogoapi400x240.jpg">
-                <img src="/static/projects/pogoapi1200x650.jpg" alt="POGO API">
+                <source media="(min-width: 1300px)" srcset="/static/projects/pogoapi/pogoapi_1500x.jpg">
+                <source media="(min-width: 1000px)" srcset="/static/projects/pogoapi/pogoapi_1200x.jpg">
+                <source media="(min-width: 570px)" srcset="/static/projects/pogoapi/pogoapi_770x.jpg">
+                <source media="(min-width: 200px)" srcset="/static/projects/pogoapi/pogoapi_400x.jpg">
+                <img src="/static/projects/pogoapi/pogoapi_original.jpg" alt="POGO API">
               </picture>
             </div>
           </div>
@@ -67,7 +73,13 @@
               </p>
             </div>
             <div class="col-md-6 col-xs-12">
-              <img class="project-preview" src="../assets/molior.png" alt="Molior">
+              <picture class="project-preview">
+                <source media="(min-width: 1300px)" srcset="/static/projects/molior/molior_1500x.jpg">
+                <source media="(min-width: 1000px)" srcset="/static/projects/molior/molior_1200x.jpg">
+                <source media="(min-width: 570px)" srcset="/static/projects/molior/molior_770x.jpg">
+                <source media="(min-width: 200px)" srcset="/static/projects/molior/molior_400x.jpg">
+                <img src="/static/projects/molior/molior_original.jpg" alt="Molior">
+              </picture>
             </div>
           </div>
         </div>
@@ -180,6 +192,9 @@ $triangle-height: 100px;
   }
   &-preview {
     box-shadow: 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12), 0 5px 5px -3px rgba(0, 0, 0, .2);
+    width: 100%;
+  }
+  picture img {
     max-width: 100%;
     max-height: 100%;
     height: auto;
