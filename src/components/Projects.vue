@@ -32,7 +32,13 @@
               </div>
             </div>
             <div class="col-md-6 col-xs-12">
-              <img class="project-preview" src="https://raw.githubusercontent.com/BrunnerLivio/pokemongo-web-api/master/.github/version_0.1.1.png" alt="POGO API">
+              <picture class="project-preview">
+                <source media="(min-width: 1300px)" srcset="/static/projects/pogoapi1500x812.jpg">
+                <source media="(min-width: 900px)" srcset="/static/projects/pogoapi1200x650.jpg">
+                <source media="(min-width: 500px)" srcset="/static/projects/pogoapi770x480.jpg">
+                <source media="(min-width: 0px)" srcset="/static/projects/pogoapi400x240.jpg">
+                <img src="/static/projects/pogoapi1200x650.jpg" alt="POGO API">
+              </picture>
             </div>
           </div>
         </div>
@@ -173,8 +179,10 @@ $triangle-height: 100px;
     top: 0;
   }
   &-preview {
-    width: 100%;
     box-shadow: 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12), 0 5px 5px -3px rgba(0, 0, 0, .2);
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
   }
   .glow-button {
     margin-left: 1rem;
