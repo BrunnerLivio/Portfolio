@@ -18,7 +18,7 @@
             <div class="col-md-6 col-xs-12">
               <p>
                 tsp-web is a visualization of the Debian program
-                <a href="http://vicerveza.homeunix.net/~viric/soft/ts/" target="_blank">task-spooler</a>. It runs on NodeJS. For the routing I used ExpressJS. Socket.IO is used for the websocket communication between server and client. One task to accomplish was, to parse the raw output from the tsp-command using regular expressions.
+                <a href="http://vicerveza.homeunix.net/~viric/soft/ts/" target="_blank">task-spooler</a>. It runs on NodeJS. Technologies like ExpressJS or Socket.IO were used in this project. One task to accomplish was parsing the raw output from the tsp-command using regular expressions.
               </p>
               <div class="row center-xs start-md">
                 <a class="glow-button" href="https://github.com/Roche/tsp-web" target="_blank">GITHUB</a>
@@ -31,7 +31,10 @@
           <div class="row">
             <div class="col-md-6 col-xs-12">
               <p>
-                POGO API is a RESTful API for Pokemon GO. The whole application is written in TypeScript. ExpressJS handles the routing of the application. Handlebars is used for the static frontend generating. Bundled with Webpack.
+                POGO API is a RESTful API for Pokemon GO. The whole application is written in TypeScript. Handlebars is used for the static frontend. This API is split in 3 projects. The
+                <a href="https://github.com/BrunnerLivio/pokemongo-web-api" target="_blank">API istelf</a>,
+                <a href="https://github.com/BrunnerLivio/pokemongo-game-master" target="_blank">pokemongo-game-master</a> which is raw PokemonGO data and
+                <a href="https://github.com/BrunnerLivio/pokemongo-json-pokedex" target="_blank">pokemongo-json-pokedex</a> which transforms the raw data into better processable JSON information.
               </p>
               <div class="row center-xs start-md">
                 <a class="glow-button" href="https://github.com/BrunnerLivio/pokemongo-web-api" target="_blank">GITHUB</a>
@@ -56,7 +59,7 @@
             </div>
             <div class="col-md-6 col-xs-12">
               <p>
-                CLI tool which installs the runtime dependencies of debian packages, without installing the package itself. This application is small, but well-rounded with automatic unit tests, MAN-pages and autocompletion. This program is written in Python. The program parses a "debian/control"" file using regular expressions, in order to get its runtime dependencies.
+                CLI tool which installs the runtime dependencies of debian packages, without installing the package itself. This application is small, but well-rounded with automatic unit tests, MAN-pages and autocompletion. It is written in Python. The program parses a "debian/control" file using regular expressions, in order to get its runtime dependencies.
               </p>
               <div class="row center-xs start-md">
                 <a class="glow-button" href="https://github.com/Roche/mk-deps" target="_blank">GITHUB</a>
@@ -69,7 +72,7 @@
           <div class="row">
             <div class="col-md-6 col-xs-12">
               <p>
-                molior is an automagic debian builder, which pulls git repos if there's a new release (git tag like v0.0.2), builds them and publishes/serves the built debian packages through aptly. My terroritory was mostly in the frontend and backend API. The difficult parts to accomplish in this project were to create an appealing web interface which broke down complex tasks.
+                molior is an <i>automagic</i> debian builder, which builds git repos if there's a new release (git tag like v0.0.2), builds them and publishes/serves the built debian packages through aptly. My terroritory was mostly in the frontend and backend API. The difficult parts to accomplish in this project were to create an appealing web interface which broke down complex tasks.
               </p>
             </div>
             <div class="col-md-6 col-xs-12">
