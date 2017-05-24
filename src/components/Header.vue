@@ -33,8 +33,8 @@ export default {
     },
   },
   mounted() {
-    this.$el.addEventListener('mousemove', (e) => { this.update(e); });
-    this.$el.addEventListener('touchmove', (e) => { this.update(e); });
+    window.addEventListener('mousemove', (e) => { this.update(e); });
+    window.addEventListener('touchmove', (e) => { this.update(e); });
   },
 };
 
