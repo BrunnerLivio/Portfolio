@@ -16,7 +16,7 @@
         <div class="col-xs-4 row center-xs middle-md">
           <div class="portrait">
             <div class="portrait-container">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Arnold_Schwarzenegger_February_2015.jpg">
+              <img src="/static/arnold.jpg">
             </div>
           </div>
         </div>
