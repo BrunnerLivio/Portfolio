@@ -33,11 +33,11 @@ export default {
 <style scoped lang="scss">
 @import '../styles/main';
 .contact {
-  background: $accent;
+  background: $primary;
   margin: 0;
   &-content {
-    margin-top: 100px;
-    margin-bottom: 150px;
+    margin-top: 250px;
+    margin-bottom: 250px;
   }
   h2 {
     color: white;
@@ -91,10 +91,12 @@ a:not(.icon-link) {
 .icon {
   height: 32px;
   width: 32px;
-  margin: 0 10px;
+  margin: 5px 25px;
   display: block;
   background-size: 100% 100%;
   cursor: pointer;
+  position: relative;
+  transition: transform 0.4s ease-in-out;
   &--codepen {
     background-image: url(../assets/codepen.svg);
   }
@@ -103,6 +105,33 @@ a:not(.icon-link) {
   }
   &--twitter {
     background-image: url(../assets/twitter.svg);
+  }
+  &::after {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 100%;
+    content: '';
+    display: block;
+    height: 50px;
+    width: 50px;
+    position: relative;
+    left: -9px;
+    top: -9px;
+    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.05), 0 0 0 10px rgba(255, 255, 255, 0.05);
+    opacity: 0;
+    transform: scale(0.5);
+    transition: opacity 0.3s ease-in-out, transform 0.4s ease-in-out;
+    z-index: 0;
+  }
+  &:hover {
+    &::after {
+      opacity: 1;
+      transform: scale(1.0);
+    }
+    transform: scale(1.1);
+  }
+  &:active {
+    transition: none;
+    transform: scale(1.0);
   }
 }
 </style>
