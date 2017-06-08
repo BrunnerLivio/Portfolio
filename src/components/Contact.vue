@@ -1,43 +1,81 @@
 <template>
   <section class="contact row center-xs">
-    <div class="col-xs-12 col-sm-10 col-md-8 col-lg-8 column center-xs">
-      <h2>Contact</h2>
+    <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 column center-xs">
       <div class="contact-content">
-        <a class="mail" href="mailto:hello@brunerliv.io">hello@brunnerliv.io</a>
-        <div class="row center-xs social">
-          <a href="http://codepen.io/BrunnerLivio" class="icon-link" target="_blank">
-            <span class="icon icon--codepen"></span>
-          </a>
-          <a href="https://github.com/BrunnerLivio" class="icon-link" target="_blank">
-            <span class="icon icon--github"></span>
-          </a>
-          <a href="https://twitter.com/brunnerlivio" class="icon-link" target="_blank">
-            <span class="icon icon--twitter"></span>
-          </a>
+        <div class="contact-content-inner">
+          <a class="mail" href="mailto:hello@brunerliv.io">hello@brunnerliv.io</a>
+          <div class="row center-xs social">
+            <a href="http://codepen.io/BrunnerLivio" class="icon-link" target="_blank">
+              <span class="icon icon--codepen"></span>
+            </a>
+            <a href="https://github.com/BrunnerLivio" class="icon-link" target="_blank">
+              <span class="icon icon--github"></span>
+            </a>
+            <a href="https://twitter.com/brunnerlivio" class="icon-link" target="_blank">
+              <span class="icon icon--twitter"></span>
+            </a>
+          </div>
+          <div class="row center-xs">
+            <div class="divider"></div>
+          </div>
+          <router-link v-bind:to="'impressum'">Impressum</router-link>
         </div>
-        <div class="row center-xs">
-          <div class="divider"></div>
-        </div>
-        <router-link v-bind:to="'impressum'">Impressum</router-link>
+
       </div>
     </div>
   </section>
 </template>
 
 <script>
+import * as VanillaTilt from 'vanilla-tilt';
+
 export default {
   name: 'contact',
+  created() {
+    setTimeout(() => {
+      VanillaTilt.init(this.$el.querySelector('.contact-content'), {
+        max: 8,
+      });
+    });
+  },
 };
 </script>
 
 <style scoped lang="scss">
 @import '../styles/main';
 .contact {
-  background: $primary;
   margin: 0;
   &-content {
-    margin-top: 250px;
-    margin-bottom: 250px;
+    margin: 70px 0;
+    background-image: url(/static/contact-background.jpg);
+    background-size: cover;
+    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12), 0 5px 5px -3px rgba(0, 0, 0, .2);
+    transform-style: preserve-3d;
+    background-position: center;
+    &:before {
+      content: '';
+      @include gradient-directional($primary, $accent);
+      width: 100%;
+      height: 100%;
+      display: block;
+      transform: translateZ(0px);
+      position: absolute;
+      opacity: 0.5;
+      transition: transform 0.3s ease-in-out;
+    }
+    &:hover {
+      &:before {
+        transform: translateZ(15px);
+      }
+    }
+    &-inner {
+      padding: 180px 0;
+      transform: translateZ(0px);
+      transition: transform 0.3s ease-in-out;
+      &:hover {
+        transform: translateZ(50px);
+      }
+    }
   }
   h2 {
     color: white;
