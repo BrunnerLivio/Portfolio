@@ -1,7 +1,7 @@
 <template>
   <section class="row container center-xs">
     <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10" id="projects">
-      <h2>Projects</h2>
+      <h2 class="title" id="projects-title">Projects</h2>
       <div class="row center-xs">
         <div class="col-md-10 project" id="tsp-web-project">
           <h3>tsp-web</h3>
@@ -51,6 +51,26 @@
             </div>
           </div>
         </div>
+        <div class="col-md-10 project" id="molior-project">
+          <h3>molior</h3>
+          <div class="row">
+            <div class="col-md-6 col-xs-12">
+              <p>
+                molior is an
+                <i>automagic</i> debian builder, which builds git repos if there's a new release (git tag like v0.0.2), builds them and publishes/serves the built debian packages through aptly. My terroritory was mostly in the frontend and backend API. The difficult parts to accomplish in this project were to create an appealing web interface which broke down complex tasks.
+              </p>
+            </div>
+            <div class="col-md-6 col-xs-12">
+              <picture class="project-preview">
+                <source media="(min-width: 1300px)" srcset="/static/projects/molior/molior_1500x.jpg">
+                <source media="(min-width: 1000px)" srcset="/static/projects/molior/molior_1200x.jpg">
+                <source media="(min-width: 570px)" srcset="/static/projects/molior/molior_770x.jpg">
+                <source media="(min-width: 200px)" srcset="/static/projects/molior/molior_400x.jpg">
+                <img src="/static/projects/molior/molior_original.jpg" alt="Molior">
+              </picture>
+            </div>
+          </div>
+        </div>
         <div class="col-md-10 project" id="mk-deps-project">
           <h3>mk-deps</h3>
           <div class="row">
@@ -67,30 +87,11 @@
             </div>
           </div>
         </div>
-        <div class="col-md-10 project" id="molior-project">
-          <h3>molior</h3>
-          <div class="row">
-            <div class="col-md-6 col-xs-12">
-              <p>
-                molior is an <i>automagic</i> debian builder, which builds git repos if there's a new release (git tag like v0.0.2), builds them and publishes/serves the built debian packages through aptly. My terroritory was mostly in the frontend and backend API. The difficult parts to accomplish in this project were to create an appealing web interface which broke down complex tasks.
-              </p>
-            </div>
-            <div class="col-md-6 col-xs-12">
-              <picture class="project-preview">
-                <source media="(min-width: 1300px)" srcset="/static/projects/molior/molior_1500x.jpg">
-                <source media="(min-width: 1000px)" srcset="/static/projects/molior/molior_1200x.jpg">
-                <source media="(min-width: 570px)" srcset="/static/projects/molior/molior_770x.jpg">
-                <source media="(min-width: 200px)" srcset="/static/projects/molior/molior_400x.jpg">
-                <img src="/static/projects/molior/molior_original.jpg" alt="Molior">
-              </picture>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
     </div>
-    <div id="molior-background" class="project-background"></div>
     <div id="mk-deps-background" class="project-background"></div>
+    <div id="molior-background" class="project-background"></div>
     <div id="pogo-api-background" class="project-background"></div>
     <div id="tsp-web-background" class="project-background"></div>
     <div id="projects-background" class="project-background"></div>
@@ -112,6 +113,9 @@ export default {
       this.$mkDeps = this.$el.querySelector('#mk-deps-project');
       this.$mkDepsBackground = this.$el.querySelector('#mk-deps-background');
       this.$molior = this.$el.querySelector('#molior-project');
+      this.$moliorBackground = this.$el.querySelector('#molior-background');
+
+      this.$projectsTitle = this.$el.querySelector('#projects-title');
       const scrollBottom = window.scrollY + (window.innerHeight / 2);
 
       const tspWebOffsetTop = offset(this.$tspWeb).top;
@@ -122,8 +126,11 @@ export default {
       if (scrollBottom > tspWebOffsetTop) {
         addClass(this.$projectsBackground, 'fade-out');
         addClass(this.$tspWeb, 'active');
+        addClass(this.$projectsTitle, 'active');
       } else {
         removeClass(this.$projectsBackground, 'fade-out');
+        removeClass(this.$tspWeb, 'active');
+        removeClass(this.$projectsTitle, 'active');
       }
       if (scrollBottom > pogoAPIOffsetTop) {
         addClass(this.$tspWebBackground, 'fade-out');
@@ -131,17 +138,17 @@ export default {
       } else {
         removeClass(this.$tspWebBackground, 'fade-out');
       }
-      if (scrollBottom > mkDepsOffsetTop) {
+      if (scrollBottom > moliorOffsetTop) {
         addClass(this.$pogoApiBackground, 'fade-out');
-        addClass(this.$mkDeps, 'active');
+        addClass(this.$molior, 'active');
       } else {
         removeClass(this.$pogoApiBackground, 'fade-out');
       }
-      if (scrollBottom > moliorOffsetTop) {
-        addClass(this.$mkDepsBackground, 'fade-out');
-        addClass(this.$molior, 'active');
+      if (scrollBottom > mkDepsOffsetTop) {
+        addClass(this.$moliorBackground, 'fade-out');
+        addClass(this.$mkDeps, 'active');
       } else {
-        removeClass(this.$mkDepsBackground, 'fade-out');
+        removeClass(this.$moliorBackground, 'fade-out');
       }
     },
   },
@@ -168,6 +175,14 @@ $triangle-height: 100px;
   margin: 0;
   padding: 0;
   overflow: hidden;
+}
+
+.title {
+  color: $primary;
+  transition: 0.5s ease-in-out color;
+  &.active {
+    color: white;
+  }
 }
 
 .project {
@@ -208,7 +223,7 @@ $triangle-height: 100px;
 }
 
 #projects-background {
-  background-color: $primary_dark;
+  background-color: darken($light-background, 3);
 }
 
 #tsp-web-background {

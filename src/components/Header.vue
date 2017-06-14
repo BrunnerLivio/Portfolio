@@ -1,9 +1,6 @@
 <template>
   <header>
-    <div class="bubbles" id="bubbles1"></div>
-    <div class="bubbles" id="bubbles2"></div>
-    <div class="bubbles" id="bubbles3"></div>
-    <div class="bubbles" id="bubbles4"></div>
+    <app-bubbles></app-bubbles>
     <div class="sunset"></div>
     <section class="row center-xs middle-xs introduction">
       <div>
@@ -21,20 +18,12 @@
 </template>
 
 <script>
+import Bubbles from '@/components/Bubbles';
+
 export default {
   name: 'header',
-  methods: {
-    update(e) {
-      const x = e.pageX - this.$el.offsetLeft;
-      this.$el.querySelector('#bubbles4').style.left = `-${x * 0.01}px`;
-      this.$el.querySelector('#bubbles3').style.left = `-${x * 0.008}px`;
-      this.$el.querySelector('#bubbles2').style.left = `-${x * 0.005}px`;
-      this.$el.querySelector('#bubbles1').style.left = `-${x * 0.001}px`;
-    },
-  },
-  mounted() {
-    window.addEventListener('mousemove', (e) => { this.update(e); });
-    window.addEventListener('touchmove', (e) => { this.update(e); });
+  components: {
+    'app-bubbles': Bubbles,
   },
 };
 
@@ -51,9 +40,6 @@ header {
   padding: 0;
   height: 100vh;
   overflow: hidden;
-  @media #{$break-md} {
-    height: 80vh;
-  }
   .sunset {
     width: 100%;
     height: 50%;
@@ -62,52 +48,6 @@ header {
     bottom: 0;
     @include gradient-vertical(rgba(255, 255, 255, 0), $accent);
     opacity: 0.38;
-  }
-}
-
-@keyframes animStar {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-2000px);
-  }
-}
-
-
-
-
-.bubbles {
-  animation: animStar linear infinite;
-  border-radius: 200px;
-  position: relative;
-  &#bubbles1 {
-    box-shadow: $bubble-shadow-1;
-    width: 4px;
-    height: 4px;
-    animation-duration: 200s;
-  }
-
-  &#bubbles2 {
-    box-shadow: $bubble-shadow-2;
-    width: 8px;
-    height: 8px;
-    animation-duration: 160s;
-  }
-
-  &#bubbles3 {
-    box-shadow: $bubble-shadow-3;
-    width: 12px;
-    height: 12px;
-    animation-duration: 120s;
-    opacity: 0.1;
-  }
-
-  &#bubbles4 {
-    box-shadow: $bubble-shadow-4;
-    width: 16px;
-    height: 16px;
-    animation-duration: 100s;
   }
 }
 

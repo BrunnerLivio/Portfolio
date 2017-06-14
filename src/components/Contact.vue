@@ -1,42 +1,37 @@
 <template>
-  <section class="contact row center-xs">
-    <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 column center-xs">
-      <div class="contact-content">
-        <div class="contact-content-inner">
-          <a class="mail" href="mailto:hello@brunerliv.io">hello@brunnerliv.io</a>
-          <div class="row center-xs social">
-            <a href="http://codepen.io/BrunnerLivio" class="icon-link" target="_blank">
-              <span class="icon icon--codepen"></span>
-            </a>
-            <a href="https://github.com/BrunnerLivio" class="icon-link" target="_blank">
-              <span class="icon icon--github"></span>
-            </a>
-            <a href="https://twitter.com/brunnerlivio" class="icon-link" target="_blank">
-              <span class="icon icon--twitter"></span>
-            </a>
-          </div>
-          <div class="row center-xs">
-            <div class="divider"></div>
-          </div>
-          <router-link v-bind:to="'impressum'">Impressum</router-link>
+  <section class="contact">
+    <app-bubbles></app-bubbles>
+    <div class="sunset"></div>
+    <div class="contact-content">
+      <div class="contact-content-inner  row center-xs col-xs-12">
+        <a class="mail" href="mailto:hello@brunerliv.io">hello@brunnerliv.io</a>
+        <div class="row col-xs-12 center-xs social">
+          <a href="http://codepen.io/BrunnerLivio" class="icon-link" target="_blank">
+            <span class="icon icon--codepen"></span>
+          </a>
+          <a href="https://github.com/BrunnerLivio" class="icon-link" target="_blank">
+            <span class="icon icon--github"></span>
+          </a>
+          <a href="https://twitter.com/brunnerlivio" class="icon-link" target="_blank">
+            <span class="icon icon--twitter"></span>
+          </a>
         </div>
-
+        <div class="row col-xs-12 center-xs">
+          <div class="divider"></div>
+        </div>
+        <router-link v-bind:to="'impressum'">Impressum</router-link>
       </div>
     </div>
   </section>
 </template>
 
 <script>
-import * as VanillaTilt from 'vanilla-tilt';
+import Bubbles from '@/components/Bubbles';
 
 export default {
   name: 'contact',
-  created() {
-    setTimeout(() => {
-      VanillaTilt.init(this.$el.querySelector('.contact-content'), {
-        max: 8,
-      });
-    });
+  components: {
+    'app-bubbles': Bubbles,
   },
 };
 </script>
@@ -45,40 +40,29 @@ export default {
 @import '../styles/main';
 .contact {
   margin: 0;
+  position: relative;
+  overflow: hidden;
+  background: $primary;
+  @include gradient-radial($primary, $primary_dark);
+  .sunset {
+    content: '';
+    width: 100%;
+    height: 50%;
+    display: block;
+    position: absolute;
+    top: 0;
+    @include gradient-vertical($accent, rgba(255, 255, 255, 0));
+    opacity: 0.38;
+  }
   &-content {
-    margin: 70px 0;
-    background-image: url(/static/contact-background.jpg);
-    background-size: cover;
+
     box-shadow: 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12), 0 5px 5px -3px rgba(0, 0, 0, .2);
     transform-style: preserve-3d;
     background-position: center;
-    &:before {
-      content: '';
-      @include gradient-directional($primary, $accent);
-      width: 100%;
-      height: 100%;
-      display: block;
-      transform: translateZ(0px);
-      position: absolute;
-      opacity: 0.5;
-      transition: transform 0.3s ease-in-out;
-    }
-    &:hover {
-      &:before {
-        transform: translateZ(15px);
-      }
-    }
+    width: 100%;
     &-inner {
       padding: 180px 0;
-      transform: translateZ(0px);
-      transition: transform 0.3s ease-in-out;
-      &:hover {
-        transform: translateZ(50px);
-      }
     }
-  }
-  h2 {
-    color: white;
   }
 }
 
@@ -117,7 +101,7 @@ a:not(.icon-link) {
   width: 100%;
   height: 2px;
   margin: 25px 10px;
-  background: white;
+  background: rgba(255, 255, 255, 0.8);
   width: 50%;
   min-width: 200px;
 }
