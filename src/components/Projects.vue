@@ -1,8 +1,8 @@
 <template>
   <section>
-    <div class="triangle-left"></div>
-    <div class="triangle-right"></div>
-    <h2 class="title"></h2>
+    <div class="triangle-top-left"></div>
+    <div class="triangle-top-right"></div>
+    <div class="content-shadow"></div>
     <div class="project-wrapper row container center-xs">
       <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10" id="projects">
         <div class="row center-xs">
@@ -99,6 +99,9 @@
     <div id="pogo-api-background" class="project-background"></div>
     <div id="tsp-web-background" class="project-background"></div>
     <div id="projects-background" class="project-background"></div>
+    <div class="triangle-bottom-left"></div>
+    <div class="triangle-bottom-right"></div>
+    <div class="content-shadow"></div>
   </section>
 </template>
 
@@ -175,8 +178,9 @@ section {
   position: relative;
 }
 
-.triangle-left {
+.triangle-top-left {
   left: 0;
+  top: 0;
   border-width: 0 $content-margin-xs / 2 + px $shadow-height-xs + px 0;
   border-color: transparent $shadow-background transparent transparent;
   @media #{$break-md} {
@@ -184,8 +188,9 @@ section {
   }
 }
 
-.triangle-right {
+.triangle-top-right {
   right: 0;
+  top: 0;
   border-width: $shadow-height-xs + px $content-margin-xs / 2 + px 0 0;
   border-color: $shadow-background transparent transparent transparent;
   @media #{$break-md} {
@@ -193,9 +198,30 @@ section {
   }
 }
 
-.triangle-left,
-.triangle-right {
-  top: 0;
+.triangle-bottom-left {
+  left: 0;
+  bottom: 0;
+  border-color: transparent transparent $shadow-background transparent;
+  border-width: 0 0 $shadow-height-xs + px $content-margin-xs / 2 + px;
+  @media #{$break-md} {
+    border-width: 0 0 $shadow-height-md + px $content-margin-md / 2 + px;
+  }
+}
+
+.triangle-bottom-right {
+  right: 0;
+  bottom: 0;
+  border-color: transparent transparent transparent $shadow-background;
+  border-width: $shadow-height-xs + px 0 0 $content-margin-xs / 2 + px;
+  @media #{$break-md} {
+    border-width: $shadow-height-md + px 0 0 $content-margin-md / 2 + px;
+  }
+}
+
+.triangle-top-left,
+.triangle-top-right,
+.triangle-bottom-left,
+.triangle-bottom-right {
   position: absolute;
   width: 0;
   height: 0;
@@ -210,7 +236,7 @@ section {
   overflow: hidden;
 }
 
-.title {
+.content-shadow {
   color: $body-text-color;
   background-color: $shadow-background;
   margin: 0;
