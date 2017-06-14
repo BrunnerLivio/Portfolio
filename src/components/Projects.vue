@@ -21,7 +21,8 @@
               <div class="col-md-6 col-xs-12 last-xs first-md">
                 <p>
                   tsp-web is a visualization of the Debian program
-                  <a href="http://vicerveza.homeunix.net/~viric/soft/ts/" target="_blank">task-spooler</a>. It runs on NodeJS. Technologies like ExpressJS or Socket.IO were used in this project. One task to accomplish was parsing the raw output from the tsp-command using regular expressions.
+                  <a href="http://vicerveza.homeunix.net/~viric/soft/ts/" target="_blank">task-spooler</a>. It runs on NodeJS. Technologies like ExpressJS or Socket.IO were used in this project. One task to accomplish was parsing the raw output from the tsp-command using
+                  <i>regular expressions</i>.
                 </p>
                 <div class="row center-xs start-md">
                   <a class="glow-button" href="https://github.com/Roche/tsp-web" target="_blank">GITHUB</a>
@@ -34,10 +35,10 @@
             <div class="row">
               <div class="col-md-6 col-xs-12 last-xs">
                 <p>
-                  POGO API is a RESTful API for Pokemon GO. The whole application is written in TypeScript. Handlebars is used for the static frontend. This API is split in 3 projects. The
+                  POGO API is a RESTful API for Pokemon GO. This API is split in 3 projects. The
                   <a href="https://github.com/BrunnerLivio/pokemongo-web-api" target="_blank">API istelf</a>,
                   <a href="https://github.com/BrunnerLivio/pokemongo-game-master" target="_blank">pokemongo-game-master</a> which is raw PokemonGO data and
-                  <a href="https://github.com/BrunnerLivio/pokemongo-json-pokedex" target="_blank">pokemongo-json-pokedex</a> which transforms the raw data into better processable JSON information.
+                  <a href="https://github.com/BrunnerLivio/pokemongo-json-pokedex" target="_blank">pokemongo-json-pokedex</a> which transforms the raw data into better processable JSON information. The whole application is written in TypeScript. Handlebars is used for the static frontend.
                 </p>
                 <div class="row center-xs start-md">
                   <a class="glow-button" href="https://github.com/BrunnerLivio/pokemongo-web-api" target="_blank">GITHUB</a>
@@ -60,7 +61,7 @@
               <div class="col-md-6 col-xs-12 last-xs first-md">
                 <p>
                   molior is an
-                  <i>automagic</i> debian builder, which builds git repos if there's a new release (git tag like v0.0.2), builds them and publishes/serves the built debian packages through aptly. My terroritory was mostly in the frontend and backend API. The difficult parts to accomplish in this project were to create an appealing web interface which broke down complex tasks.
+                  <i>automagic</i> debian builder, which builds git repositories if there's a new release (git tag like v0.0.2), builds them and publishes/serves the built debian packages through aptly. My terroritory was mostly in the frontend and backend API. The difficult parts to accomplish in this project were to create an appealing web interface which broke down complex tasks.
                 </p>
               </div>
               <div class="col-md-6 col-xs-12 first-xs last-md">
