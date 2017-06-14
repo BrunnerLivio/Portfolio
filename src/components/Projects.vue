@@ -6,7 +6,7 @@
     <div class="project-wrapper row container center-xs">
       <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10" id="projects">
         <div class="row center-xs">
-          <div class="col-md-10 project active" id="tsp-web-project">
+          <div class="col-md-10 project" id="tsp-web-project">
             <h3>tsp-web</h3>
             <div class="row">
               <div class="col-md-6 col-xs-12 first-xs last-md">
@@ -133,19 +133,16 @@ export default {
       }
       if (scrollBottom > pogoAPIOffsetTop) {
         addClass(this.$tspWebBackground, 'fade-out');
-        addClass(this.$pogoAPI, 'active');
       } else {
         removeClass(this.$tspWebBackground, 'fade-out');
       }
       if (scrollBottom > moliorOffsetTop) {
         addClass(this.$pogoApiBackground, 'fade-out');
-        addClass(this.$molior, 'active');
       } else {
         removeClass(this.$pogoApiBackground, 'fade-out');
       }
       if (scrollBottom > mkDepsOffsetTop) {
         addClass(this.$moliorBackground, 'fade-out');
-        addClass(this.$mkDeps, 'active');
       } else {
         removeClass(this.$moliorBackground, 'fade-out');
       }
@@ -242,11 +239,7 @@ section {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  transition: opacity 1s ease-in-out,
-  top 1s ease-in-out;
-  opacity: 0;
   position: relative;
-  top: 30px;
   @media #{$break-md} {
     min-height: 80vh;
   }
@@ -255,10 +248,6 @@ section {
     h3 {
       margin-top: 0;
     }
-  }
-  &.active {
-    opacity: 1;
-    top: 0;
   }
   &-preview {
     width: 100%;
