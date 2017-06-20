@@ -16,7 +16,12 @@
         <div class="col-xs-4 row center-xs middle-md">
           <div class="portrait">
             <div class="portrait-container">
-              <img src="/static/arnold.jpg">
+              <picture class="project-preview">
+                <source media="(min-width: 1000px)" srcset="/static/about-me/portrait_large.jpg">
+                <source media="(min-width: 800px)" srcset="/static/about-me/portrait_medium.jpg">
+                <source media="(min-width: 570px)" srcset="/static/about-me/portrait_small.jpg">
+                <img src="/static/about-me/portrait_medium.jpg" alt="tsp-web">
+              </picture>
             </div>
           </div>
         </div>

@@ -72,12 +72,18 @@ header {
   position: absolute;
   bottom: 0;
   left: 0;
-  background: url(../assets/header_triangles.png);
-  background-size: 100% 100%;
   width: 100%;
-  height: 130px;
+  height: 136px;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../../static/header/header_triangles_small.png);
+  @media #{$break-sm} {
+    background-image: url(../../static/header/header_triangles_medium.png);
+    height: 180px;
+  }
   @media #{$break-md} {
-    height: 200px;
+    background-image: url(../../static/header/header_triangles_large.png);
+    height: 241px;
   }
 }
 
