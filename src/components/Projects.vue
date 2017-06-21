@@ -288,7 +288,7 @@ section {
   flex-direction: column;
   padding: 20px;
   position: relative;
-  min-height: 70vh;
+  min-height: 100vh;
   &:nth-child(even) {
     &:not(:first-child) {
       &::before {
@@ -318,9 +318,6 @@ section {
   &:nth-child(even) {
     background: $shadow-content-background-even;
   }
-  @media #{$break-md} {
-    min-height: 100vh;
-  }
   &:first-child {
     padding-top: 50px;
     h3 {
@@ -332,30 +329,25 @@ section {
     opacity: 0;
     transition: 0.5s ease-in-out opacity;
     &::after {
-      content: '';
+      @media #{$break-md} {
+        content: '';
+      }
       display: block;
       width: 100%;
       height: 20px;
       position: absolute;
       bottom: 6px;
-      @include gradient-vertical(rgba(0, 0, 0, 0), rgba(220, 227, 232, 0.9));
       z-index: 0;
       border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-    }
-    &::before {
-      content: '';
-      display: block;
-      width: calc(100% - 140px);
-      margin-left: 70px;
-      height: 20px;
-      position: absolute;
-      bottom: 8px;
-      @include gradient-vertical(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.05));
-      z-index: 2;
+      @include gradient-vertical(rgba(0, 0, 0, 0), rgba(220, 227, 232, 1));
     }
     img {
-      margin: 0 70px 5px 70px;
-      width: calc(100% - 140px);
+      margin: 0 40px 5px 40px;
+      width: calc(100% - 80px);
+      @media #{$break-md} {
+        margin: 0 70px 5px 70px;
+        width: calc(100% - 140px);
+      }
       position: relative;
       z-index: 1;
       max-width: 100%;
