@@ -25,32 +25,22 @@
   <meta name="msapplication-TileColor" content="#4038a5">
   <meta name="msapplication-TileImage" content="/static/ms-icon-144x144.png">
   <meta name="theme-color" content="#4038a5">
-  <meta name='copyright' content='Livio Brunner'>
-  <meta name='language' content='EN'>
-  <meta name='robots' content='index,follow'>
-  <meta name='HandheldFriendly' content='True'>
-  <script>
-    (function (i, s, o, g, r, a, m) {
-      i['GoogleAnalyticsObject'] = r;
-      i[r] = i[r] || function () {
-        (i[r].q = i[r].q || []).push(arguments)
-      }, i[r].l = 1 * new Date();
-      a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0];
-      a.async = 1;
-      a.src = g;
-      m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
-    ga('create', 'UA-78529910-1', 'auto');
-    ga('send', 'pageview');
-
-  </script>
+  <meta name="copyright" content="Livio Brunner">
+  <meta name="language" content="EN">
+  <meta name="robots" content="index,follow">
+  <meta name="HandheldFriendly" content="True">
 </head>
 
 <body>
   <div id="app"></div>
   <!-- built files will be auto injected -->
+
+  <script src="https://cdn.jsdelivr.net/ga-lite/latest/ga-lite.min.js" async></script>
+  <script>
+    var galite = galite || {};
+    galite.UA = 'UA-78529910-1';
+
+  </script>
 </body>
 
 </html>
