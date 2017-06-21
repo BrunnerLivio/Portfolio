@@ -9,6 +9,7 @@
 <script>
 export default {
   name: 'bubbles',
+  props: ['noMouse'],
   methods: {
     update(e) {
       const x = e.pageX - this.$el.offsetLeft;
@@ -19,8 +20,10 @@ export default {
     },
   },
   mounted() {
-    window.addEventListener('mousemove', (e) => { this.update(e); });
-    window.addEventListener('touchmove', (e) => { this.update(e); });
+    if (this.noMouse !== '' && this.noMouse !== false) {
+      window.addEventListener('mousemove', (e) => { this.update(e); });
+      window.addEventListener('touchmove', (e) => { this.update(e); });
+    }
   },
 };
 </script>
@@ -28,6 +31,7 @@ export default {
 @import '../styles/main';
 section {
   height: 0;
+  width: 0;
 }
 
 @keyframes animStar {
