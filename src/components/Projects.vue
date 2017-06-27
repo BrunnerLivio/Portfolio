@@ -12,13 +12,15 @@
               <div class="row">
                 <div class="col-xs-12 col-xs-offset-0 col-md-10 col-md-offset-1 middle-xs center-xs">
                   <div class="project-preview">
-                    <picture>
-                      <source media="(min-width: 1300px)" srcset="/static/projects/tsp-web/tsp-web_1500x.jpg">
-                      <source media="(min-width: 1000px)" srcset="/static/projects/tsp-web/tsp-web_1200x.jpg">
-                      <source media="(min-width: 570px)" srcset="/static/projects/tsp-web/tsp-web_770x.jpg">
-                      <source media="(min-width: 200px)" srcset="/static/projects/tsp-web/tsp-web_400x.jpg">
-                      <img src="/static/projects/tsp-web/tsp-web_original.jpg" alt="tsp-web">
-                    </picture>
+                    <div class="project-preview-container">
+                      <picture>
+                        <source media="(min-width: 1300px)" srcset="/static/projects/tsp-web/tsp-web_1500x.jpg">
+                        <source media="(min-width: 1000px)" srcset="/static/projects/tsp-web/tsp-web_1200x.jpg">
+                        <source media="(min-width: 570px)" srcset="/static/projects/tsp-web/tsp-web_770x.jpg">
+                        <source media="(min-width: 200px)" srcset="/static/projects/tsp-web/tsp-web_400x.jpg">
+                        <img src="/static/projects/tsp-web/tsp-web_original.jpg" alt="tsp-web">
+                      </picture>
+                    </div>
                   </div>
                 </div>
                 <div class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2 middle-xs">
@@ -39,13 +41,17 @@
               <h3>POGO API</h3>
               <div class="row">
                 <div class="col-xs-12 col-xs-offset-0 col-md-10 col-md-offset-1 middle-xs center-xs">
-                  <picture class="project-preview">
-                    <source media="(min-width: 1300px)" srcset="/static/projects/pogoapi/pogoapi_1500x.jpg">
-                    <source media="(min-width: 1000px)" srcset="/static/projects/pogoapi/pogoapi_1200x.jpg">
-                    <source media="(min-width: 570px)" srcset="/static/projects/pogoapi/pogoapi_770x.jpg">
-                    <source media="(min-width: 200px)" srcset="/static/projects/pogoapi/pogoapi_400x.jpg">
-                    <img src="/static/projects/pogoapi/pogoapi_original.jpg" alt="POGO API">
-                  </picture>
+                  <div class="project-preview">
+                    <div class="project-preview-container">
+                      <picture>
+                        <source media="(min-width: 1300px)" srcset="/static/projects/pogoapi/pogoapi_1500x.jpg">
+                        <source media="(min-width: 1000px)" srcset="/static/projects/pogoapi/pogoapi_1200x.jpg">
+                        <source media="(min-width: 570px)" srcset="/static/projects/pogoapi/pogoapi_770x.jpg">
+                        <source media="(min-width: 200px)" srcset="/static/projects/pogoapi/pogoapi_400x.jpg">
+                        <img src="/static/projects/pogoapi/pogoapi_original.jpg" alt="POGO API">
+                      </picture>
+                    </div>
+                  </div>
                 </div>
                 <div class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2 middle-xs center-xs">
                   <p>
@@ -66,13 +72,17 @@
               <h3>molior</h3>
               <div class="row">
                 <div class="col-xs-12 col-xs-offset-0 col-md-10 col-md-offset-1 middle-xs center-xs">
-                  <picture class="project-preview">
-                    <source media="(min-width: 1300px)" srcset="/static/projects/molior/molior_1500x.jpg">
-                    <source media="(min-width: 1000px)" srcset="/static/projects/molior/molior_1200x.jpg">
-                    <source media="(min-width: 570px)" srcset="/static/projects/molior/molior_770x.jpg">
-                    <source media="(min-width: 200px)" srcset="/static/projects/molior/molior_400x.jpg">
-                    <img src="/static/projects/molior/molior_original.jpg" alt="Molior">
-                  </picture>
+                  <div class="project-preview">
+                    <div class="project-preview-container">
+                      <picture>
+                        <source media="(min-width: 1300px)" srcset="/static/projects/molior/molior_1500x.jpg">
+                        <source media="(min-width: 1000px)" srcset="/static/projects/molior/molior_1200x.jpg">
+                        <source media="(min-width: 570px)" srcset="/static/projects/molior/molior_770x.jpg">
+                        <source media="(min-width: 200px)" srcset="/static/projects/molior/molior_400x.jpg">
+                        <img src="/static/projects/molior/molior_original.jpg" alt="Molior">
+                      </picture>
+                    </div>
+                  </div>
                 </div>
                 <div class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2 middle-xs center-xs">
                   <p>
@@ -89,7 +99,9 @@
               <div class="row">
                 <div class="col-xs-12 col-xs-offset-0 col-md-10 col-md-offset-1 middle-xs center-xs">
                   <div class="project-preview">
-                    <img src="../assets/mk-deps.gif" alt="mk-deps">
+                    <div class="project-preview-container">
+                      <img src="../assets/mk-deps.gif" alt="mk-deps">
+                    </div>
                   </div>
                 </div>
                 <div class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2 middle-xs center-xs">
@@ -106,7 +118,7 @@
         </div>
       </div>
     </div>
-
+  
     <div id="mk-deps-background" class="project-background"></div>
     <div id="molior-background" class="project-background"></div>
     <div id="pogo-api-background" class="project-background"></div>
@@ -290,6 +302,7 @@ section {
   position: relative;
   min-height: 100vh;
   &:nth-child(even) {
+    background: $shadow-content-background-even;
     &:not(:first-child) {
       &::before {
         display: block;
@@ -314,9 +327,24 @@ section {
         border-bottom: 1px solid rgba(255, 255, 255, 0.8);
       }
     }
+    .project-preview-container {
+      &::before {
+        @include gradient-horizontal(rgba(0, 0, 0, 0), $shadow-content-background-even);
+      }
+      &::after {
+        @include gradient-horizontal($shadow-content-background-even, rgba(0, 0, 0, 0));
+      }
+    }
   }
-  &:nth-child(even) {
-    background: $shadow-content-background-even;
+  &:nth-child(odd) {
+    .project-preview-container {
+      &::before {
+        @include gradient-horizontal(rgba(0, 0, 0, 0), $shadow-content-background);
+      }
+      &::after {
+        @include gradient-horizontal($shadow-content-background, rgba(0, 0, 0, 0));
+      }
+    }
   }
   &:first-child {
     padding-top: 50px;
@@ -329,30 +357,48 @@ section {
     opacity: 0;
     transition: 0.5s ease-in-out opacity;
     &::after {
-      @media #{$break-md} {
-        content: '';
-      }
+      content: '';
       display: block;
       width: 100%;
-      height: 20px;
+      height: 30px;
       position: absolute;
       bottom: 6px;
       z-index: 0;
       border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-      @include gradient-vertical(rgba(0, 0, 0, 0), rgba(220, 227, 232, 1));
+      @include gradient-vertical(rgba(0, 0, 0, 0), rgba(215, 223, 232, 1));
     }
     img {
-      margin: 0 40px 5px 40px;
-      width: calc(100% - 80px);
-      @media #{$break-md} {
-        margin: 0 70px 5px 70px;
-        width: calc(100% - 140px);
-      }
+      width: calc(100% - 90px);
       position: relative;
-      z-index: 1;
+      z-index: 9;
       max-width: 100%;
       max-height: 100%;
       height: auto;
+      bottom: 4px;
+      @media #{$break-md} {
+        width: calc(100% - 280px);
+      }
+    }
+    &-container {
+      display: block;
+      position: relative;
+      height: 100%;
+      &:before,
+      &:after {
+        content: '';
+        display: block;
+        width: 150px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        z-index: 2;
+      }
+      &:after {
+        left: 0;
+      }
+      &:before {
+        right: 0;
+      }
     }
   }
   h3 {
