@@ -29,6 +29,11 @@
                     <a href="http://vicerveza.homeunix.net/~viric/soft/ts/" target="_blank">task-spooler</a>. It runs on NodeJS. Technologies like ExpressJS or Socket.IO were used in this project. One task to accomplish was parsing the raw output from the tsp-command using
                     <i>regular expressions</i>.
                   </p>
+                  <div class="technologies">
+                    <i class="icon-javascript"></i>
+                    <i class="icon-nodejs"></i>
+                    <i class="icon-shell"></i>
+                  </div>
                   <div class="row center-xs middle-xs">
                     <primary-button href="https://github.com/Roche/tsp-web" target="_blank">GITHUB</primary-button>
                   </div>
@@ -60,6 +65,10 @@
                     <a href="https://github.com/BrunnerLivio/pokemongo-game-master" target="_blank">pokemongo-game-master</a> which is raw PokemonGO data and
                     <a href="https://github.com/BrunnerLivio/pokemongo-json-pokedex" target="_blank">pokemongo-json-pokedex</a> which transforms the raw data into better processable JSON information. The whole application is written in TypeScript. Handlebars is used for the static frontend.
                   </p>
+                  <div class="technologies">
+                    <i class="icon-javascript"></i>
+                    <i class="icon-nodejs"></i>
+                  </div>
                   <div class="row center-xs middle-xs">
                     <primary-button href="https://github.com/BrunnerLivio/pokemongo-web-api" target="_blank">GITHUB</primary-button>
                   </div>
@@ -90,6 +99,12 @@
                     <i>automagic</i> debian builder, which builds git repositories if there's a new release (git tag like v0.0.2), builds them and publishes/serves the built debian packages through aptly. My terroritory was mostly in the frontend and backend API. The difficult parts to accomplish in this project were to create an appealing web interface which broke down complex tasks.
                   </p>
                 </div>
+  
+              </div>
+              <div class="technologies">
+                <i class="icon-javascript"></i>
+                <i class="icon-postgres"></i>
+                <i class="icon-debian"></i>
               </div>
             </div>
           </section>
@@ -108,6 +123,10 @@
                   <p>
                     CLI tool which installs the runtime dependencies of debian packages, without installing the package itself. This application is small, but well-rounded with automatic unit tests, MAN-pages and autocompletion. It is written in Python. The program parses a "debian/control" file using regular expressions, in order to get its runtime dependencies.
                   </p>
+                  <div class="technologies">
+                    <i class="icon-python"></i>
+                    <i class="icon-shell"></i>
+                  </div>
                   <div class="row center-xs middle-xs">
                     <primary-button href="https://github.com/Roche/mk-deps" target="_blank">GITHUB</primary-button>
                   </div>
@@ -459,6 +478,15 @@ p {
     color: $body-text-color;
     text-decoration: none;
     font-weight: bold;
+  }
+}
+
+.technologies {
+  margin: 30px;
+  i {
+    font-size: 40px;
+    color: rgba(0, 0, 0, 0.4);
+    margin: 10px;
   }
 }
 

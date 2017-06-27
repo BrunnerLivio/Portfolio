@@ -4,6 +4,7 @@ import Vue from 'vue';
 import 'vanilla-tilt';
 import 'flexboxgrid/css/flexboxgrid.css';
 import 'normalize.css/normalize.css';
+import 'font-mfizz/font/font-mfizz.css';
 import App from './App';
 import router from './router';
 
