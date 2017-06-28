@@ -5,139 +5,111 @@
     <div class="content-shadow"></div>
     <div class="project-wrapper row container center-xs">
       <div id="projects">
-        <div class="row center-xs">
-          <section class="project row center-xs middle-xs" id="tsp-web-project">
-            <div class="col-md-8 col-xs-10">
-              <h3>tsp-web</h3>
-              <div class="row">
-                <div class="col-xs-12 col-xs-offset-0 col-md-10 col-md-offset-1 middle-xs center-xs">
-                  <div class="project-preview">
-                    <div class="project-preview-container">
-                      <picture>
-                        <source media="(min-width: 1300px)" srcset="/static/projects/tsp-web/tsp-web_1500x.jpg">
-                        <source media="(min-width: 1000px)" srcset="/static/projects/tsp-web/tsp-web_1200x.jpg">
-                        <source media="(min-width: 570px)" srcset="/static/projects/tsp-web/tsp-web_770x.jpg">
-                        <source media="(min-width: 200px)" srcset="/static/projects/tsp-web/tsp-web_400x.jpg">
-                        <img src="/static/projects/tsp-web/tsp-web_original.jpg" alt="tsp-web">
-                      </picture>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2 middle-xs">
-                  <p>
-                    tsp-web is a visualization of the Debian program
-                    <a href="http://vicerveza.homeunix.net/~viric/soft/ts/" target="_blank">task-spooler</a>. It runs on NodeJS. Technologies like ExpressJS or Socket.IO were used in this project. One task to accomplish was parsing the raw output from the tsp-command using
-                    <i>regular expressions</i>.
-                  </p>
-                  <div class="technologies">
-                    <i class="icon-javascript"></i>
-                    <i class="icon-nodejs"></i>
-                    <i class="icon-shell"></i>
-                  </div>
-                  <div class="row center-xs middle-xs">
-                    <primary-button href="https://github.com/Roche/tsp-web" target="_blank">GITHUB</primary-button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section class="project row center-xs middle-xs" id="pogo-api-project">
-            <div class="col-md-8 col-xs-10">
-              <h3>POGO API</h3>
-              <div class="row">
-                <div class="col-xs-12 col-xs-offset-0 col-md-10 col-md-offset-1 middle-xs center-xs">
-                  <div class="project-preview">
-                    <div class="project-preview-container">
-                      <picture>
-                        <source media="(min-width: 1300px)" srcset="/static/projects/pogoapi/pogoapi_1500x.jpg">
-                        <source media="(min-width: 1000px)" srcset="/static/projects/pogoapi/pogoapi_1200x.jpg">
-                        <source media="(min-width: 570px)" srcset="/static/projects/pogoapi/pogoapi_770x.jpg">
-                        <source media="(min-width: 200px)" srcset="/static/projects/pogoapi/pogoapi_400x.jpg">
-                        <img src="/static/projects/pogoapi/pogoapi_original.jpg" alt="POGO API">
-                      </picture>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2 middle-xs center-xs">
-                  <p>
-                    POGO API is a RESTful API for Pokemon GO. This API is split in 3 projects. The
-                    <a href="https://github.com/BrunnerLivio/pokemongo-web-api" target="_blank">API istelf</a>,
-                    <a href="https://github.com/BrunnerLivio/pokemongo-game-master" target="_blank">pokemongo-game-master</a> which is raw PokemonGO data and
-                    <a href="https://github.com/BrunnerLivio/pokemongo-json-pokedex" target="_blank">pokemongo-json-pokedex</a> which transforms the raw data into better processable JSON information. The whole application is written in TypeScript. Handlebars is used for the static frontend.
-                  </p>
-                  <div class="technologies">
-                    <i class="icon-javascript"></i>
-                    <i class="icon-nodejs"></i>
-                  </div>
-                  <div class="row center-xs middle-xs">
-                    <primary-button href="https://github.com/BrunnerLivio/pokemongo-web-api" target="_blank">GITHUB</primary-button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section class="project row center-xs middle-xs" id="molior-project">
-            <div class="col-md-8 col-xs-10">
-              <h3>molior</h3>
-              <div class="row">
-                <div class="col-xs-12 col-xs-offset-0 col-md-10 col-md-offset-1 middle-xs center-xs">
-                  <div class="project-preview">
-                    <div class="project-preview-container">
-                      <picture>
-                        <source media="(min-width: 1300px)" srcset="/static/projects/molior/molior_1500x.jpg">
-                        <source media="(min-width: 1000px)" srcset="/static/projects/molior/molior_1200x.jpg">
-                        <source media="(min-width: 570px)" srcset="/static/projects/molior/molior_770x.jpg">
-                        <source media="(min-width: 200px)" srcset="/static/projects/molior/molior_400x.jpg">
-                        <img src="/static/projects/molior/molior_original.jpg" alt="Molior">
-                      </picture>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2 middle-xs center-xs">
-                  <p>
-                    molior is an
-                    <i>automagic</i> debian builder, which builds git repositories if there's a new release (git tag like v0.0.2), builds them and publishes/serves the built debian packages through aptly. My terroritory was mostly in the frontend and backend API. The difficult parts to accomplish in this project were to create an appealing web interface which broke down complex tasks.
-                  </p>
-                </div>
-  
-              </div>
+        <section class="project middle-xs" id="tsp-web-project">
+          <div class="col-md-8 col-xs-12 col-md-offset-2">
+            <h3>tsp-web</h3>
+            <project-preview>
+              <picture>
+                <source media="(min-width: 1300px)" srcset="/static/projects/tsp-web/tsp-web_1500x.jpg">
+                <source media="(min-width: 1000px)" srcset="/static/projects/tsp-web/tsp-web_1200x.jpg">
+                <source media="(min-width: 570px)" srcset="/static/projects/tsp-web/tsp-web_770x.jpg">
+                <source media="(min-width: 200px)" srcset="/static/projects/tsp-web/tsp-web_400x.jpg">
+                <img src="/static/projects/tsp-web/tsp-web_original.jpg" alt="tsp-web">
+              </picture>
+            </project-preview>
+            <div class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2 middle-xs">
+              <p>
+                tsp-web is a visualization of the Debian program
+                <a href="http://vicerveza.homeunix.net/~viric/soft/ts/" target="_blank">task-spooler</a>. It runs on NodeJS. Technologies like ExpressJS or Socket.IO were used in this project. One task to accomplish was parsing the raw output from the tsp-command using
+                <i>regular expressions</i>.
+              </p>
               <div class="technologies">
                 <i class="icon-javascript"></i>
-                <i class="icon-postgres"></i>
-                <i class="icon-debian"></i>
+                <i class="icon-nodejs"></i>
+                <i class="icon-shell"></i>
+              </div>
+              <div class="row center-xs middle-xs">
+                <primary-button href="https://github.com/Roche/tsp-web" target="_blank">GITHUB</primary-button>
               </div>
             </div>
-          </section>
-          <section class="project row center-xs middle-xs" id="mk-deps-project">
-            <div class="col-md-8 col-xs-10 col-xs-10">
-              <h3>mk-deps</h3>
-              <div class="row">
-                <div class="col-xs-12 col-xs-offset-0 col-md-10 col-md-offset-1 middle-xs center-xs">
-                  <div class="project-preview">
-                    <div class="project-preview-container">
-                      <img src="../assets/mk-deps.gif" alt="mk-deps">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2 middle-xs center-xs">
-                  <p>
-                    CLI tool which installs the runtime dependencies of debian packages, without installing the package itself. This application is small, but well-rounded with automatic unit tests, MAN-pages and autocompletion. It is written in Python. The program parses a "debian/control" file using regular expressions, in order to get its runtime dependencies.
-                  </p>
-                  <div class="technologies">
-                    <i class="icon-python"></i>
-                    <i class="icon-shell"></i>
-                  </div>
-                  <div class="row center-xs middle-xs">
-                    <primary-button href="https://github.com/Roche/mk-deps" target="_blank">GITHUB</primary-button>
-                  </div>
-                </div>
+          </div>
+        </section>
+        <section class="project middle-xs" id="pogo-api-project">
+          <div class="col-md-8 col-xs-12 col-md-offset-2">
+            <h3>POGO API</h3>
+            <project-preview>
+              <picture>
+                <source media="(min-width: 1300px)" srcset="/static/projects/pogoapi/pogoapi_1500x.jpg">
+                <source media="(min-width: 1000px)" srcset="/static/projects/pogoapi/pogoapi_1200x.jpg">
+                <source media="(min-width: 570px)" srcset="/static/projects/pogoapi/pogoapi_770x.jpg">
+                <source media="(min-width: 200px)" srcset="/static/projects/pogoapi/pogoapi_400x.jpg">
+                <img src="/static/projects/pogoapi/pogoapi_original.jpg" alt="POGO API">
+              </picture>
+            </project-preview>
+            <div class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2 middle-xs center-xs">
+              <p>
+                POGO API is a RESTful API for Pokemon GO. This API is split in 3 projects. The
+                <a href="https://github.com/BrunnerLivio/pokemongo-web-api" target="_blank">API istelf</a>,
+                <a href="https://github.com/BrunnerLivio/pokemongo-game-master" target="_blank">pokemongo-game-master</a> which is raw PokemonGO data and
+                <a href="https://github.com/BrunnerLivio/pokemongo-json-pokedex" target="_blank">pokemongo-json-pokedex</a> which transforms the raw data into better processable JSON information. The whole application is written in TypeScript. Handlebars is used for the static frontend.
+              </p>
+              <div class="technologies">
+                <i class="icon-javascript"></i>
+                <i class="icon-nodejs"></i>
+              </div>
+              <div class="row center-xs middle-xs">
+                <primary-button href="https://github.com/BrunnerLivio/pokemongo-web-api" target="_blank">GITHUB</primary-button>
               </div>
             </div>
-          </section>
-        </div>
+          </div>
+        </section>
+        <section class="project middle-xs" id="molior-project">
+          <div class="col-md-8 col-xs-12 col-md-offset-2">
+            <h3>molior</h3>
+            <project-preview>
+              <picture>
+                <source media="(min-width: 1300px)" srcset="/static/projects/molior/molior_1500x.jpg">
+                <source media="(min-width: 1000px)" srcset="/static/projects/molior/molior_1200x.jpg">
+                <source media="(min-width: 570px)" srcset="/static/projects/molior/molior_770x.jpg">
+                <source media="(min-width: 200px)" srcset="/static/projects/molior/molior_400x.jpg">
+                <img src="/static/projects/molior/molior_original.jpg" alt="Molior">
+              </picture>
+            </project-preview>
+            <div class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2 middle-xs center-xs">
+              <p>
+                molior is an
+                <i>automagic</i> debian builder, which builds git repositories if there's a new release (git tag like v0.0.2), builds them and publishes/serves the built debian packages through aptly. My terroritory was mostly in the frontend and backend API. The difficult parts to accomplish in this project were to create an appealing web interface which broke down complex tasks.
+              </p>
+            </div>
+            <div class="technologies">
+              <i class="icon-javascript"></i>
+              <i class="icon-postgres"></i>
+              <i class="icon-debian"></i>
+            </div>
+          </div>
+        </section>
+        <section class="project middle-xs" id="mk-deps-project">
+          <div class="col-md-8 col-xs-12 col-md-offset-2">
+            <h3>mk-deps</h3>
+            <project-preview>
+              <img src="../assets/mk-deps.gif" alt="mk-deps">
+            </project-preview>
+            <div class="col-xs-12 col-xs-offset-0 col-md-8 col-md-offset-2 middle-xs center-xs">
+              <p>
+                CLI tool which installs the runtime dependencies of debian packages, without installing the package itself. This application is small, but well-rounded with automatic unit tests, MAN-pages and autocompletion. It is written in Python. The program parses a "debian/control" file using regular expressions, in order to get its runtime dependencies.
+              </p>
+              <div class="technologies">
+                <i class="icon-python"></i>
+                <i class="icon-shell"></i>
+              </div>
+              <div class="row center-xs middle-xs">
+                <primary-button href="https://github.com/Roche/mk-deps" target="_blank">GITHUB</primary-button>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
-  
     <div id="mk-deps-background" class="project-background"></div>
     <div id="molior-background" class="project-background"></div>
     <div id="pogo-api-background" class="project-background"></div>
@@ -151,12 +123,14 @@
 
 <script>
 import PrimaryButton from '@/components/PrimaryButton';
+import ProjectPreview from '@/components/ProjectPreview';
 import { addClass, removeClass, offset } from './Utils';
 
 export default {
   name: 'projects',
   components: {
     'primary-button': PrimaryButton,
+    'project-preview': ProjectPreview,
   },
   methods: {
     update() {
@@ -216,7 +190,7 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 @import '../styles/main';
 $triangle-height: 100px;
 $shadow-background: darken($light-background, 8);
@@ -315,9 +289,7 @@ section {
 }
 
 .project {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
+  padding-top: 20px;
   position: relative;
   min-height: 100vh;
   &:nth-child(even) {
@@ -329,8 +301,9 @@ section {
         height: 20px;
         position: absolute;
         top: 0;
+        left: 0;
         width: 100%;
-        @include gradient-vertical(rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0));
+        @include gradient-vertical(rgba(0, 0, 0, 0.04), rgba(255, 255, 255, 0.001));
         border-top: 1px solid rgba(255, 255, 255, 0.8);
       }
     }
@@ -341,83 +314,33 @@ section {
         height: 20px;
         position: absolute;
         bottom: 0;
+        left: 0;
         width: 100%;
-        @include gradient-vertical(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.04));
+        @include gradient-vertical(rgba(255, 255, 255, 0.001), rgba(0, 0, 0, 0.04));
         border-bottom: 1px solid rgba(255, 255, 255, 0.8);
       }
     }
     .project-preview-container {
-      &::before {
-        @include gradient-horizontal(rgba(0, 0, 0, 0), $shadow-content-background-even);
+      .project-preview-container-right-shadow {
+        @include gradient-horizontal(rgba(255, 255, 255, 0.001), $shadow-content-background-even);
       }
-      &::after {
-        @include gradient-horizontal($shadow-content-background-even, rgba(0, 0, 0, 0));
+      .project-preview-container-left-shadow {
+        @include gradient-horizontal($shadow-content-background-even, rgba(255, 255, 255, 0.001));
       }
     }
   }
   &:nth-child(odd) {
-    .project-preview-container {
-      &::before {
-        @include gradient-horizontal(rgba(0, 0, 0, 0), $shadow-content-background);
-      }
-      &::after {
-        @include gradient-horizontal($shadow-content-background, rgba(0, 0, 0, 0));
-      }
+    .project-preview-container-right-shadow {
+      @include gradient-horizontal(rgba(255, 255, 255, 0.001), $shadow-content-background);
+    }
+    .project-preview-container-left-shadow {
+      @include gradient-horizontal($shadow-content-background, rgba(255, 255, 255, 0.001));
     }
   }
   &:first-child {
     padding-top: 50px;
     h3 {
       margin-top: 0;
-    }
-  }
-  &-preview {
-    position: relative;
-    opacity: 0;
-    transition: 0.5s ease-in-out opacity;
-    &::after {
-      content: '';
-      display: block;
-      width: 100%;
-      height: 30px;
-      position: absolute;
-      bottom: 6px;
-      z-index: 0;
-      border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-      @include gradient-vertical(rgba(0, 0, 0, 0), rgba(215, 223, 232, 1));
-    }
-    img {
-      width: calc(100% - 90px);
-      position: relative;
-      z-index: 9;
-      max-width: 100%;
-      max-height: 100%;
-      height: auto;
-      bottom: 4px;
-      @media #{$break-md} {
-        width: calc(100% - 280px);
-      }
-    }
-    &-container {
-      display: block;
-      position: relative;
-      height: 100%;
-      &:before,
-      &:after {
-        content: '';
-        display: block;
-        width: 150px;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        z-index: 2;
-      }
-      &:after {
-        left: 0;
-      }
-      &:before {
-        right: 0;
-      }
     }
   }
   h3 {
@@ -484,7 +407,10 @@ p {
 .technologies {
   margin: 30px;
   i {
-    font-size: 40px;
+    font-size: 30px;
+    @media #{$break-md} {
+      font-size: 40px;
+    }
     color: rgba(0, 0, 0, 0.4);
     margin: 10px;
   }
