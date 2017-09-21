@@ -19,7 +19,6 @@
         <div class="row col-xs-12 center-xs">
           <div class="divider"></div>
         </div>
-        <router-link v-bind:to="'impressum'">Impressum</router-link>
       </div>
     </div>
   </section>
