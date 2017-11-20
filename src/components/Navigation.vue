@@ -39,7 +39,7 @@ export default {
   methods: {
     update() {
       const scrollTop = window.scrollY;
-      if (scrollTop >= this.navTop) {
+      if (scrollTop > this.navTop) {
         addClass(this.$el, 'sticky');
       } else {
         removeClass(this.$el, 'sticky');
@@ -53,7 +53,7 @@ export default {
   created() {
     window.addEventListener('scroll', () => { this.update(); });
     window.addEventListener('touchmove', () => { this.update(); });
-    window.removeEventListener('resize', () => { this.update(); });
+    window.addEventListener('resize', () => { this.update(); });
   },
   destroyed() {
     window.removeEventListener('scroll', this.update);
