@@ -52,22 +52,9 @@ header {
 }
 
 .highlight {
-  @include gradient-vertical($accent_light, $accent);
   color: $accent;
-  -moz-background-clip: text;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -moz-text-fill-color: transparent;
-  -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
 }
 
-@-moz-document url-prefix() {
-  /* Mozilla Only */
-  .highlight {
-    background-image: none !important;
-  }
-}
 
 .introduction {
   height: 100%;
