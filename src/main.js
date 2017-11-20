@@ -1,12 +1,16 @@
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
-import Vue from 'vue';
 import 'vanilla-tilt';
 import 'flexboxgrid/css/flexboxgrid.css';
 import 'normalize.css/normalize.css';
-import 'font-mfizz/font/font-mfizz.css';
+import 'font-mfizz/dist/font-mfizz.css';
+
+import VueScrollTo from 'vue-scrollto';
+import Vue from 'vue';
 import App from './App';
 import router from './router';
+
+Vue.use(VueScrollTo, {
+  offset: -60,
+});
 
 Vue.config.productionTip = false;
 
