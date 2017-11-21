@@ -65,8 +65,8 @@ export default {
 
 <style lang="scss" scoped>
 @import '../styles/main';
-$navigation-height: 80px;
-$navigation-height-sm: 60px;
+$navigation-height: 60px;
+$navigation-height-sm: 40px;
 .navigation {
     overflow: hidden;
     &.sticky {
@@ -126,7 +126,7 @@ nav {
             list-style: none;
             font-family: $accent_font;
             text-decoration: none;
-            @include poly-fluid-sizing('font-size', (576px: 20px, 992px: 22px, 320px: 14px, 191px: 10px));
+            @include poly-fluid-sizing('font-size', (576px: 16px, 992px: 18px, 320px: 14px, 191px: 10px));
             height: $navigation-height-sm;
             display: flex;
             justify-content: center;

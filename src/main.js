@@ -9,7 +9,7 @@ import App from './App';
 import router from './router';
 
 Vue.use(VueScrollTo, {
-  offset: -60,
+  offset: -40,
 });
 
 Vue.config.productionTip = false;
