@@ -8,7 +8,7 @@
 - NPM
 
 ``` bash
-sudo apt install npm nodejs nodejs-legacy
+sudo apt install npm nodejs
 ```
 
 ## Build Setup
